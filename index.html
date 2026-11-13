@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#075b2b">
+  <meta name="description" content="Michelle's Shopping and Delivery Services — shopping and delivery to your doorstep across Accra.">
+  <title>Michelle's Shopping & Delivery Services | Accra</title>
+  <style>
+    :root{--green:#075b2b;--deep:#043d20;--lime:#18a34a;--yellow:#ffd629;--cream:#f7fff7;--ink:#17231b}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit}
+    .topbar{background:var(--deep);color:#fff;text-align:center;padding:9px 16px;font-size:14px}
+    header{background:#fff;position:sticky;top:0;z-index:5;box-shadow:0 2px 14px #00000012}
+    .nav{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:900;color:var(--green);font-size:21px;line-height:1.1;text-decoration:none}
+    .brand span{display:block;color:#9a7900;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;margin-top:5px}
+    .navlinks{display:flex;align-items:center;gap:24px}
+    .navlinks a{text-decoration:none;font-weight:700;font-size:14px}
+    .navlinks a:hover{color:var(--lime)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--yellow);color:var(--deep);font-weight:900;text-decoration:none;padding:13px 20px;border-radius:999px;box-shadow:0 5px 0 #d5ae00;transition:.2s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 #d5ae00}
+    .hero{background:linear-gradient(115deg,#f4fff4 0%,#fff 55%,#e5f7e9 100%);overflow:hidden}
+    .hero-inner{max-width:1120px;margin:auto;padding:72px 22px 66px;display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center}
+    .eyebrow{display:inline-block;background:#e0f5e5;color:var(--green);font-weight:900;padding:7px 13px;border-radius:99px;font-size:13px;letter-spacing:.5px}
+    h1{font-size:clamp(38px,5.5vw,64px);line-height:1.02;letter-spacing:-2px;color:var(--deep);margin:18px 0}
+    h1 em{font-style:normal;color:#d1a900}
+    .lead{font-size:19px;max-width:540px;color:#425248}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .btn-green{background:var(--green);color:#fff;box-shadow:0 5px 0 var(--deep)}
+    .btn-green:hover{box-shadow:0 7px 0 var(--deep)}
+    .hero-visual{min-height:390px;border-radius:30px;background:linear-gradient(145deg,#087438,#034521);position:relative;display:flex;align-items:center;justify-content:center;padding:34px;color:white;box-shadow:0 22px 50px #075b2b30}
+    .bike-art{font-size:clamp(100px,15vw,180px);filter:drop-shadow(0 10px 6px #001c0c55)}
+    .visual-tag{position:absolute;background:var(--yellow);color:var(--deep);font-weight:900;padding:13px 18px;border-radius:16px;box-shadow:0 8px 20px #001c0c30}
+    .tag-one{top:25px;left:-14px}.tag-two{bottom:25px;right:-12px}
+    .visual-caption{position:absolute;bottom:85px;left:30px;font-weight:800;font-size:18px}
+    .section{max-width:1120px;margin:auto;padding:68px 22px}
+    .section-head{text-align:center;max-width:680px;margin:0 auto 34px}
+    .section-head h2{font-size:clamp(28px,4vw,40px);color:var(--deep);line-height:1.12;margin:10px 0}
+    .section-head p{color:#617066;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{border:1px solid #e4eee6;border-radius:22px;padding:26px;background:#fff;box-shadow:0 10px 28px #073d2010}
+    .card-icon{width:54px;height:54px;border-radius:16px;background:#e5f7e9;display:grid;place-items:center;font-size:27px}
+    .card h3{color:var(--green);margin:17px 0 7px;font-size:20px}
+    .card p{margin:0;color:#5b685f}
+    .how{background:var(--cream)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{padding:22px;border-radius:18px;background:#fff}
+    .number{width:38px;height:38px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:900;color:var(--deep)}
+    .step h3{margin:12px 0 5px;color:var(--green)}
+    .step p{margin:0;color:#647067}
+    .promise{background:var(--deep);color:#fff;text-align:center;padding:58px 22px}
+    .promise h2{font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 12px}
+    .promise p{color:#d9eadf;font-size:18px;margin:0 auto 25px;max-width:620px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+    .contact-panel{background:#f4fbf5;border-radius:22px;padding:28px}
+    .contact-panel h3{color:var(--green);margin-top:0}
+    .contact-line{display:flex;gap:12px;align-items:center;margin:14px 0;font-weight:700}
+    .contact-line span{font-size:22px}
+    form{display:grid;gap:12px}
+    input,textarea,select{width:100%;padding:14px 15px;border:1px solid #cbd9ce;border-radius:12px;font:inherit;background:#fff}
+    textarea{min-height:110px;resize:vertical}
+    form button{border:0;cursor:pointer;font:inherit}
+    footer{background:#032f19;color:#dcebe0;text-align:center;padding:24px 18px;font-size:14px}
+    footer strong{color:var(--yellow)}
+    @media(max-width:760px){
+      .nav{padding:13px 16px}.navlinks{gap:12px}.navlinks a:not(.btn){display:none}
+      .hero-inner{grid-template-columns:1fr;padding:48px 18px}.hero-visual{min-height:300px}
+      .cards,.steps,.contact-grid{grid-template-columns:1fr}
+      .section{padding:52px 18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Shopping and delivery across Accra • Just book, I'm just a ride away!</div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#">Michelle's <span>Shopping & Delivery</span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="https://wa.me/233535558654?text=Hello%20Michelle's%20Shopping%20and%20Delivery%2C%20I%20would%20like%20to%20make%20a%20booking.">Book now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">YOUR CONVENIENCE, OUR PRIORITY</span>
+          <h1>Shopping and delivery <em>to your doorstep.</em></h1>
+          <p class="lead">Need someone to shop for you or deliver your items? Michelle's Shopping and Delivery Services is ready to help across Accra.</p>
+          <div class="hero-actions">
+            <a class="btn btn-green" href="https://wa.me/233535558654?text=Hello%2C%20I%20want%20to%20book%20a%20shopping%20or%20delivery%20service.">Book on WhatsApp</a>
+            <a class="btn" href="tel:+233535558654">Call 053 555 8654</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Electric bike delivery illustration">
+          <div class="visual-tag tag-one">FAST • SAFE • RELIABLE</div>
+          <div class="bike-art" aria-hidden="true">🛵</div>
+          <div class="visual-caption">Your items, on their way!</div>
+          <div class="visual-tag tag-two">ACCRA, GHANA</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-head">
+        <span class="eyebrow">WHAT WE DO</span>
+        <h2>Let us take the trip for you</h2>
+        <p>From shopping errands to getting your items safely to you, booking is simple.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">🛒</div><h3>Personal Shopping</h3><p>Send your shopping list and preferred items. We can shop on your behalf and bring your purchases to you.</p></article>
+        <article class="card"><div class="card-icon">📦</div><h3>Doorstep Delivery</h3><p>Have a parcel or product that needs to get somewhere? Book a delivery within Accra.</p></article>
+        <article class="card"><div class="card-icon">⚡</div><h3>Electric Bike Service</h3><p>Enjoy convenient local errands and delivery with an electric-bike rider.</p></article>
+      </div>
+    </section>
+
+    <section class="how">
+      <div class="section">
+        <div class="section-head">
+          <span class="eyebrow">SIMPLE BOOKING</span>
+          <h2>How it works</h2>
+          <p>Three easy steps to get your shopping or delivery moving.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="number">1</div><h3>Contact us</h3><p>Call or WhatsApp with your shopping list or delivery details.</p></article>
+          <article class="step"><div class="number">2</div><h3>Confirm the details</h3><p>Agree on the items, pickup and drop-off locations, and service fee before the trip.</p></article>
+          <article class="step"><div class="number">3</div><h3>Relax and receive</h3><p>Your rider gets moving and brings your items to the agreed destination.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise">
+      <h2>Just book, I'm just a ride away.</h2>
+      <p>Shopping and delivery to your doorsteps, with friendly service and care for your items.</p>
+      <a class="btn" href="https://wa.me/233535558654?text=Hello%2C%20I'd%20like%20to%20book%20a%20service.">Book your service</a>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-head">
+        <span class="eyebrow">LET'S GET YOU SORTED</span>
+        <h2>Ready to book?</h2>
+        <p>Contact us directly or send your request using the form.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-panel">
+          <h3>Michelle's Shopping & Delivery</h3>
+          <div class="contact-line"><span>📞</span><a href="tel:+233535558654">053 555 8654</a></div>
+          <div class="contact-line"><span>💬</span><a href="https://wa.me/233535558654">Chat on WhatsApp</a></div>
+          <div class="contact-line"><span>📍</span><span>Serving customers within Accra</span></div>
+          <p><strong>Just book, I'm just a ride away!</strong></p>
+        </div>
+        <div class="contact-panel">
+          <h3>Send a booking request</h3>
+          <form id="bookingForm">
+            <input id="customerName" type="text" placeholder="Your name" required>
+            <input id="customerPhone" type="tel" placeholder="Your phone number" required>
+            <select id="serviceType" required>
+              <option value="">Choose a service</option>
+              <option>Personal shopping</option>
+              <option>Delivery</option>
+              <option>Shopping and delivery</option>
+            </select>
+            <textarea id="requestDetails" placeholder="Tell us what you need and the pickup/drop-off area" required></textarea>
+            <button class="btn btn-green" type="submit">Send request on WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> <strong>Michelle's Shopping & Delivery Services</strong> • Accra, Ghana</footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('customerName').value.trim();
+      const phone = document.getElementById('customerPhone').value.trim();
+      const service = document.getElementById('serviceType').value;
+      const details = document.getElementById('requestDetails').value.trim();
+      const message = `Hello Michelle's Shopping and Delivery Services. My name is ${name}. My phone number is ${phone}. I need: ${service}. Details: ${details}`;
+      window.open('https://wa.me/233535558654?text=' + encodeURIComponent(message), '_blank');
+    });
+  </script>
+</body>
+</html>
